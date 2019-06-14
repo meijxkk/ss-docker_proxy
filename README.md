@@ -87,8 +87,9 @@ systemctl start privoxy
 ##############################################################################################
 
 关闭时运行
-		source fanqiang.sh stop
 
-		./dockersetproxy.sh off 
+	source fanqiang.sh stop
+
+	./dockersetproxy.sh off 
 
 即可
