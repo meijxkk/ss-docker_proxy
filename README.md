@@ -1,6 +1,5 @@
 # ss-docker_proxy
-docker_proxy&amp;http_proxy
-docker&http 代理方法
+国内docker 拉取国外镜像时需要用到的代理方法
 
 
 # 1.搭建ss服务器
