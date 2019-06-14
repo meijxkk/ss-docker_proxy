@@ -13,25 +13,25 @@ pip install shadowsocks
 
 vim /etc/shadowsocks.json
 
-{
+	{
 
-"server":"0.0.0.0",
+	"server":"0.0.0.0",
 
-"server_port":端口,
+	"server_port":端口,
 
-"local_address":"127.0.0.1",
+	"local_address":"127.0.0.1",
 
-"password":"密码",
+	"password":"密码",
 
-"timeout":300,
+	"timeout":300,
 
-"method":"aes-256-cfb",
+	"method":"aes-256-cfb",
 
-"fast_open":false,
+	"fast_open":false,
 
-"workers":1
+	"workers":1
 
-}
+	}
 
 ssserver -c /etc/shadowsocks.json -d start 
 
@@ -45,22 +45,22 @@ pip install shadowsocks
 
 vim /etc/shadowsocks.json
 
-{
-  "server":"my_server_ip",
-  
-  
-  "local_address": "127.0.0.1",
-  
-  "local_port":1080,
-  
-  "server_port":my_server_port,
-  
-  "password":"my_password",
-  
-  "timeout":300,
-  
-  "method":"aes-256-cfb"
-}
+	{
+	  "server":"my_server_ip",
+	  
+	  
+	  "local_address": "127.0.0.1",
+	  
+	  "local_port":1080,
+	  
+	  "server_port":my_server_port,
+	  
+	  "password":"my_password",
+	  
+	  "timeout":300,
+	  
+	  "method":"aes-256-cfb"
+	}
 
 sslocal -c /etc/shadowsocks.json -d start
 
@@ -70,7 +70,7 @@ yum install -y privoxy
 
 vim /etc/privoxy/config
 
-forward-socks5t   /               127.0.0.1:1080 . #加上
+	forward-socks5t   /               127.0.0.1:1080 . #加上
 
 systemctl start privoxy
 
@@ -86,8 +86,9 @@ systemctl start privoxy
 
 ##############################################################################################
 
-关闭时运行source fanqiang.sh stop
+关闭时运行
+		source fanqiang.sh stop
 
-		  ./dockersetproxy.sh off 
+		./dockersetproxy.sh off 
 
-		  即可
+即可
