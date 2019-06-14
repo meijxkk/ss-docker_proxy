@@ -75,12 +75,16 @@ vim /etc/privoxy/config
 systemctl start privoxy
 
 4.改环境变量
-运行source fanqiang.sh start
+运行
+
+	source fanqiang.sh start
 
 
 
 5.改docker环境变量
-运行./dockersetproxy.sh on
+运行
+
+	./dockersetproxy.sh on
 
 
 
