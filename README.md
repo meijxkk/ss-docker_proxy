@@ -46,16 +46,16 @@ pip install shadowsocks
 vim /etc/shadowsocks.json
 
 	{
-	  "server":"my_server_ip",
+	  "server":"SS服务端IP",
 	  
 	  
 	  "local_address": "127.0.0.1",
 	  
 	  "local_port":1080,
 	  
-	  "server_port":my_server_port,
+	  "server_port":SS服务端port,
 	  
-	  "password":"my_password",
+	  "password":"SS服务端密码",
 	  
 	  "timeout":300,
 	  
