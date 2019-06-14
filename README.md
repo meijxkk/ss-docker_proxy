@@ -37,11 +37,18 @@ pip install shadowsocks
 vim /etc/shadowsocks.json
 {
   "server":"my_server_ip",
+  
+  
   "local_address": "127.0.0.1",
+  
   "local_port":1080,
+  
   "server_port":my_server_port,
+  
   "password":"my_password",
+  
   "timeout":300,
+  
   "method":"aes-256-cfb"
 }
 
