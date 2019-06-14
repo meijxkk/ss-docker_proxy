@@ -5,9 +5,14 @@ docker&http 代理方法
 
 1.搭建ss服务器
 yum install -y epel-release
+
+
 yum install -y python-pip 
+
 pip install shadowsocks
+
 vim /etc/shadowsocks.json
+
 {
 
 "server":"0.0.0.0",
@@ -31,10 +36,15 @@ vim /etc/shadowsocks.json
 ssserver -c /etc/shadowsocks.json -d start 
 
 2.在本机搭建ss客户端
+
 yum install -y epel-release
+
 yum install -y python-pip 
+
 pip install shadowsocks
+
 vim /etc/shadowsocks.json
+
 {
   "server":"my_server_ip",
   
@@ -55,9 +65,13 @@ vim /etc/shadowsocks.json
 sslocal -c /etc/shadowsocks.json -d start
 
 3.在本机配置代理
+
 yum install -y privoxy
+
 vim /etc/privoxy/config
+
 forward-socks5t   /               127.0.0.1:1080 . #加上
+
 systemctl start privoxy
 
 4.改环境变量
@@ -73,4 +87,7 @@ systemctl start privoxy
 ##############################################################################################
 
 关闭时运行source fanqiang.sh stop
-		  ./dockersetproxy.sh off 即可
+
+		  ./dockersetproxy.sh off 
+
+		  即可
