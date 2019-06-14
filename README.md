@@ -3,7 +3,8 @@ docker_proxy&amp;http_proxy
 docker&http 代理方法
 
 
-1.搭建ss服务器
+#1.搭建ss服务器
+
 yum install -y epel-release
 
 
@@ -35,7 +36,7 @@ vim /etc/shadowsocks.json
 
 ssserver -c /etc/shadowsocks.json -d start 
 
-2.在本机搭建ss客户端
+#2.在本机搭建ss客户端
 
 yum install -y epel-release
 
@@ -64,7 +65,7 @@ vim /etc/shadowsocks.json
 
 sslocal -c /etc/shadowsocks.json -d start
 
-3.在本机配置代理
+#3.在本机配置代理
 
 yum install -y privoxy
 
@@ -74,21 +75,21 @@ vim /etc/privoxy/config
 
 systemctl start privoxy
 
-4.改环境变量
+#4.改环境变量
 运行
 
 	source fanqiang.sh start
 
 
 
-5.改docker环境变量
+#5.改docker环境变量
 运行
 
 	./dockersetproxy.sh on
 
 
 
-##############################################################################################
+########################################################################################
 
 关闭时运行
 
