@@ -1,0 +1,42 @@
+  199  2018-04-02 16:59:20 yum install python-pip  
+  200  2018-04-02 16:59:39 pip install shadowsocks
+  201  2018-04-02 17:00:34 pip install --upgrade pip
+  202  2018-04-02 17:00:44 pip install shadowsocks  
+  203  2018-04-02 17:01:01 vi /etc/shadowsocks.json
+  204  2018-04-02 17:01:10 vim /etc/shadowsocks.json  
+  205  2018-04-02 17:02:13 ssserver -c /etc/shadowsocks.json
+  206  2018-04-02 17:02:28 ssserver -c /etc/shadowsocks.json -d start 
+
+服务端搭建：
+{
+
+"server":"0.0.0.0",
+
+"server_port":1194,
+
+"local_address":"127.0.0.1",
+
+"password":"admin12345",
+
+"timeout":300,
+
+"method":"aes-256-cfb",
+
+"fast_open":false,
+
+"workers":1
+
+}
+
+客户端搭建：
+sslocal -c /etc/shadowsocks.json -d start
+
+{
+  "server":"my_server_ip",
+  "local_address": "127.0.0.1",
+  "local_port":1080,
+  "server_port":my_server_port,
+  "password":"my_password",
+  "timeout":300,
+  "method":"aes-256-cfb"
+}
